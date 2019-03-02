@@ -1,0 +1,14 @@
+/** Program to simulate the queueing of packets at a router
+ */
+
+#include <cstdlib>
+
+using namespace std;
+
+vector<vector<int>> trafficGeneration(){
+  for(int i = 0; i < args.switchPortCount; i++){
+	// Generate packet with packetGenProb
+	float roll = rand() % RAND_MAX;
+	if(roll < args.packetGenProb) {
+	  // Packet is generated - decide output port randomly between 0 and N-1
+	  

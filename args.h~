@@ -1,0 +1,18 @@
+#ifndef ARGS_H
+#define ARGS_H
+
+using namespace std;
+
+typedef struct Args {
+  int switchPortCount;
+  int bufferSize;
+  int packetGenProb;
+  enum Queue {NOQ, INQ, KOUQ} queue;
+  int knockout;
+  char* outputfile;
+  int maxslots;
+} Args;
+
+void parse_args(Args* args, int argc, char* argv[]);
+
+#endif ARGS_H
